@@ -1,13 +1,142 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.4;
+  color: #444;
+  background: #fff;
+}
+.personal-container
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2em 0;
+  justify-content: center;
+  height: 100vh;
+}
+.form-container{
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap:wrap ;
+  margin-top: 2em;
+}
+.form-container label{
+  margin:auto;
+}
+.input-text
+{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 1em;
+  padding:12px 20px;
+  width: 100%;
+}
+.input-button
+{
+  border: #21897E 1px solid;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: #21897E;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 0.6em;
+  margin: auto;
+  margin-top: 1em;
+}
+.input-button:focus
+{
+  background-color: #305252 ;
+  color: white;
+}
+.auth-button {
+  display:flex;
+  justify-content: center;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin:auto;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.label-flex
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.label-flex input
+{
+  margin: 0.3em;
+}
+.flex-top{
+  height: 10%;
+  width: 100%;
 }
